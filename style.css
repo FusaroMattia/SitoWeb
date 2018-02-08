@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body {
+	text-align: center;
+	font-family: Source Sans Pro;
+	margin:0;
+	padding:0;
+	color: #fff;
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 100% 100%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+}
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+}
+
+
+
+#content-wrapper {width:100%;float:left;}
+
+.cop{width:100%;height: 100%;padding-bottom:160px;}
+
+h1{font-weight: 300;}
+
+#welcome{position: absolute;top:220px;text-align: center;width:100%;color:#fff;}
+	
+	#welcome h2{font-weight: 600;text-shadow: 0 2px 1px #000;text-transform: uppercase; font-size: 9vw;}
+	
+	#welcome p{color:#000;font-size: 22px}
+	
+	#welcome a{color:#fff;text-decoration: none; text-shadow: 0 2px 1px #000;}
+	
+	#welcome a:hover{color:#fbff00;}
+
+h2 {font-size: 100px;font-weight: normal;margin: 0;font-weight: 300;padding: 60px;}
+
+#info{float:left; width:100%; position: relative;margin-top:100px;}
+
+	.item{float:left;}
+
+	.icon {background: #fe4c5c; width: 250px; height: 170px; border-radius: 125px;color:#fff; font-size: 70px;margin:0 auto; padding-top:80px;}
+		
+		h3{font-size:40px;font-weight: 300;margin:20px 0 15px 0}
+
+		p {	width: 80%; margin: 0px auto; color:#666 }
+
+
+#text-2{margin-top:210px;float:left;width:100%;height:400px}
+
+/* Media Queries */
+@media (max-width: 100%) {
+
+	#welcome{top:50px;}
+	
+	h2{ top:30px;}
+	
+	#welcome a{color:#000;text-decoration: none; text-shadow: none;}
+	
+	.item{float:left;width:100%;margin-bottom:30px}
+	
+	#text-2{float:left; width:100%;height:200px;}
+	
+	 
+}
+
+
+
+	
+
+	

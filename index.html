@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<title>FusaroMattia</title>
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200,700' rel='stylesheet' type='text/css'>
+	<link href="hover.css" rel="stylesheet" media="all">
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link rel="stylesheet" href="animate.css">	
+	<script type="text/javascript" src="js/TweenMax.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  	<script>window.jQuery || document.write('<script src="_/js/jquery-1.9.1.min.js"><\/script>')</script>
+  	<script src="js/jquery.superscrollorama.js"></script>
+</head>
+<body>	
+		<img class="cop" src="img/copertina.png" />
+		
+		<div id="welcome">
+			<div class="titleWrapper animated fadeInLeft">
+    		<h1 class="first">Fusaro Mattia</h1> 
+    		<h1 class="second">Sito Personale</h1>
+			</div>	
+		</div>
+        <div id="divwriter">
+         <h3 id="run" class="animated fadeInLeft" >"run like your life depends on it"</h3> 
+        </div>
+          <div id="divwriter" style="top:65%">
+         <h3 id="run2" class="animated zoomIn" >James Dashner, The Maze Runner</h3> 
+        </div>
+		
+		<h2 id="text-1">Cosa vuoi vedere?</h2>
+		
+		<div id="info">
+			<div class="item " id="item-1">
+				<div class="icon hvr-float-shadow" id="cv" onclick="GoTo('CV/cv')"> 
+                	1 
+                </div>
+				<h3>CV</h3>
+			</div>
+			<div class="item"  id="item-2">
+				<div class="icon hvr-float-shadow" id="tesina" onclick="Go('Tesina/tesina')"> 
+                2 
+                </div>	
+				<h3>Tesina</h3>	
+			</div>
+			<div class="item" id="item-3">
+				<div class="icon hvr-float-shadow" id="sito" onclick="GoTo('Sito/sito')"> 
+                3 
+                </div>
+				<h3>Sito php/sql</h3>
+			</div>	
+		
+		</div>
+
+		<h3 class="hvr-float-shadow" id="text-2" onclick="GoTo('MyLife/mylife')">La mia storia</h3>
+	<script>
+	if (screen.width >= 600) {
+		$(document).ready(function() {
+			var controller = $.superscrollorama();
+			// individual element tween examples
+			controller.addTween('#text-1', TweenMax.fromTo( $('#text-1'), .25, {css:{opacity:0, fontSize:'5vw'}, immediateRender:true, ease:Quad.easeInOut}, {css:{opacity:1, fontSize:'8vw'}, ease:Quad.easeInOut}));
+			
+				controller.addTween('#item-1', TweenMax.fromTo( $('#item-1'), .5, {css:{opacity:0, width:'30%'}, immediateRender:true, ease:Quad.easeInOut}, {css:{opacity:1, width:'33.333%'}, ease:Quad.easeInOut}), 0);
+				
+				controller.addTween('#item-2', TweenMax.fromTo( $('#item-2'), .5, {css:{opacity:0, width:'30%'}, immediateRender:true, ease:Quad.easeInOut}, {css:{opacity:1, width:'33.333%'}, ease:Quad.easeInOut}), 100);
+				
+				controller.addTween('#item-3', TweenMax.fromTo( $('#item-3'), .5, {css:{opacity:0, width:'30%'}, immediateRender:true, ease:Quad.easeInOut}, {css:{opacity:1, width:'33.333%'}, ease:Quad.easeInOut}), 200);
+			
+			controller.addTween('#text-2', TweenMax.fromTo( $('#text-2'), .25, {css:{opacity:0, fontSize:'5vw'}, immediateRender:true, ease:Quad.easeInOut}, {css:{opacity:1, fontSize:'8vw'}, ease:Quad.easeInOut}));
+		});
+		}
+
+
+	function GoTo(i) {
+    window.location.href = "http://www.ifioidelloscript.altervista.org/"+ i + ".html";
+    }
+    function Go(i) {
+    window.location.href = "http://www.ifioidelloscript.altervista.org/"+ i + ".php";
+    }
+    
+    jQuery(document).ready(function(){jQuery(".titleWrapper").addClass("ready");
+	jQuery(".titleWrapper h1").each(function(){var fullString;
+    var characters = jQuery(this).text().split("");
+    $this = jQuery(this);
+    $this.empty();
+    $.each(characters, function (i, el) {
+        if(el == " "){el = "&nbsp;"};
+    $this.append("<span>" + el + "</span");
+    });     
+});   
+});
+
+</script>
+<style>
+#run{
+color: white;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+#run2{
+	color: white;
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    animation-duration: 3s;
+}
+#divwriter{
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    top: 60%;
+}
+.titleWrapper{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: auto;
+    text-align:center;
+    height:80px;
+    overflow:hidden;
+    width: 100%;
+    text-align:center;
+}
+h1{
+    color: white;
+    font-size: 80px;
+    margin:0;
+    padding:0;
+    line-height:80px;
+    height:80px;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    word-space: 4em;
+    letter-spacing: 0.05em;
+}
+h1 span{
+    position: relative;
+    display: inline-block;
+    transform: translateY(100%);
+    transition: all 0.25s cubic-bezier(0.65, 0, 0.21, 1.47) 0s;
+}
+
+.titleWrapper.ready h1 span{
+    transform: translateY(0%);
+}
+
+h1.first span{
+	background: transparent;
+    position:relative;
+    z-index:5;
+}
+h1.second span{
+	background: transparent;
+    position:relative;
+    z-index:1;
+}
+.titleWrapper.ready:hover h1.first span{
+    transform: translateY(-100%);
+}
+.titleWrapper.ready:hover h1.second span{
+    transform: translateY(-100%);
+}
+
+.center{
+	position: absolute;
+	left: 50%;
+	bottom: 1%;
+	transform: translate(0, -50%);
+	text-align: center;
+	width: 100%
+}
+.center span {
+	font-family: arial;
+	font-size: 48;
+	color: white;
+}
+
+</style>
+</body>
+</html>
